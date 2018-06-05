@@ -1,0 +1,38 @@
+{
+  "name": "simple-sha256",
+  "description": "Generate SHA-256 hashes (in Node and the Browser)",
+  "version": "0.0.0",
+  "author": {
+    "name": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "http://feross.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/feross/simple-sha256/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "airtap": "0.0.7",
+    "standard": "^11.0.1",
+    "tape": "^4.5.1"
+  },
+  "homepage": "https://github.com/feross/simple-sha256",
+  "keywords": [
+    "browser",
+    "browserify",
+    "node",
+    "sha256",
+    "hash",
+    "sha-256"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feross/simple-sha256.git"
+  },
+  "scripts": {
+    "test": "standard && tape test/*.js",
+    "test-browser-local": "airtap --local -- test/*.js"
+  }
+}
