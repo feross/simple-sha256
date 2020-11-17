@@ -11,7 +11,7 @@
 
 ### Generate SHA-256 hashes (in Node and the Browser)
 
-In Node.js, this package uses [`crypto.createHash()`](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options). In the browser, it uses [crypto.subtle.digest()](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest).
+In Node.js, this package uses [`crypto.createHash()`](https://nodejs.org/api/crypto.html#crypto_crypto_createhash_algorithm_options). In the browser, it uses [`crypto.subtle.digest()`](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest).
 
 ### install
 
@@ -50,4 +50,3 @@ console.log(sha256.sync('hey there'))
 ### license
 
 MIT. Copyright (c) [Feross Aboukhadijeh](https://feross.org).
-
