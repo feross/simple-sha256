@@ -13,7 +13,7 @@
   "dependencies": {},
   "devDependencies": {
     "airtap": "0.0.7",
-    "standard": "^11.0.1",
+    "standard": "*",
     "tape": "^4.5.1"
   },
   "homepage": "https://github.com/feross/simple-sha256",
