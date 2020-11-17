@@ -1,3 +1,4 @@
+/*! simple-sha256. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 module.exports = sha256
 module.exports.sync = sha256sync
 
