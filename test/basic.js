@@ -1,5 +1,5 @@
-var sha256 = require('../')
-var test = require('tape')
+const sha256 = require('../')
+const test = require('tape')
 
 const TEXT = 'hey there'
 const HASH = '74ef874a9fa69a86e091ea6dc2668047d7e102d518bebed19f8a3958f664e3da'
