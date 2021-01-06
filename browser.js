@@ -1,10 +1,7 @@
-/* global self */
-
 module.exports = sha256
 module.exports.sync = sha256sync
 
-const scope = typeof window !== 'undefined' ? window : self
-const crypto = scope.crypto || scope.msCrypto
+const crypto = globalThis.crypto || globalThis.msCrypto
 const subtle = crypto.subtle || crypto.webkitSubtle
 
 function sha256sync (buf) {
