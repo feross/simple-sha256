@@ -4,7 +4,7 @@ module.exports.sync = sha256sync
 
 const crypto = require('crypto')
 
-async function sha256 (buf, cb) {
+async function sha256 (buf) {
   return sha256sync(buf)
 }
 

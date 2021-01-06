@@ -11,7 +11,7 @@ function sha256sync (buf) {
   throw new Error('No support for sha256.sync() in the browser, use sha256()')
 }
 
-async function sha256 (buf, cb) {
+async function sha256 (buf) {
   if (typeof buf === 'string') buf = strToBuf(buf)
 
   // Browsers throw if they lack support for an algorithm.
