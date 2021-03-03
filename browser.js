@@ -13,7 +13,7 @@ async function sha256 (buf) {
 
   // Browsers throw if they lack support for an algorithm.
   // Promise will be rejected on non-secure origins. (http://goo.gl/lq4gCo)
-  const hash = subtle.digest({ name: 'sha-256' }, buf)
+  const hash = await subtle.digest({ name: 'sha-256' }, buf)
   return hex(new Uint8Array(hash))
 }
 
