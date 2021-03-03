@@ -2,7 +2,7 @@ module.exports = sha256
 module.exports.sync = sha256sync
 
 const crypto = globalThis.crypto || globalThis.msCrypto
-const subtle = crypto.subtle || crypto.webkitSubtle
+const subtle = crypto.subtle || crypto.webkitSubtle || (crypto.webcrypto && crypto.webcrypto.subtle)
 
 function sha256sync (buf) {
   throw new Error('No support for sha256.sync() in the browser, use sha256()')
