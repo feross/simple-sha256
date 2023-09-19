@@ -2,7 +2,7 @@ module.exports = sha256
 module.exports.sync = sha256sync
 
 const crypto = globalThis.crypto || globalThis.msCrypto
-const subtle = crypto.subtle || crypto.webkitSubtle
+const subtle = crypto.subtle || crypto.webkitSubtle || (crypto.webcrypto && crypto.webcrypto.subtle)
 
 function sha256sync (buf) {
   throw new Error('No support for sha256.sync() in the browser, use sha256()')
@@ -13,7 +13,7 @@ async function sha256 (buf) {
 
   // Browsers throw if they lack support for an algorithm.
   // Promise will be rejected on non-secure origins. (http://goo.gl/lq4gCo)
-  const hash = subtle.digest({ name: 'sha-256' }, buf)
+  const hash = await subtle.digest({ name: 'sha-256' }, buf)
   return hex(new Uint8Array(hash))
 }
 
